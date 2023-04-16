@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 06, 2020 at 06:20 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Hôte : 127.0.0.1
+-- Généré le : dim. 16 avr. 2023 à 22:15
+-- Version du serveur : 10.4.25-MariaDB
+-- Version de PHP : 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `supershop_rdb`
+-- Base de données : `supershop_rdb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admins`
+-- Structure de la table `admins`
 --
 
 CREATE TABLE `admins` (
@@ -41,19 +40,18 @@ CREATE TABLE `admins` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `admins`
+-- Déchargement des données de la table `admins`
 --
 
 INSERT INTO `admins` (`id`, `admin_name`, `admin_email`, `admin_image`, `admin_password`, `admin_status`, `admin_type`, `created_at`, `updated_at`) VALUES
-(1, 'Nirjhor Anjum Sir', 'nirjhor@adnsl.net', 'ADMINIMAGE_20200706021804_nirjhoranjumsir.png', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', 'Root Admin', '2020-07-06 02:18:04', NULL),
-(2, 'Md. Abdullah Al Mamun Roni', 'md.aamroni@hotmail.com', 'ADMINIMAGE_20200706021844_aamroni.png', '04974f51537a701bcdf340064418a10d3895dde1', 'Active', 'Root Admin', '2020-07-06 02:18:44', NULL),
-(3, 'Jhon Doe', 'jhondoe@gmail.com', 'ADMINIMAGE_20200706021940_jhon.png', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', 'Content Manager', '2020-07-06 02:19:40', NULL),
-(4, 'Al Mamun', 'md.aamroni@yahoo.com', 'ADMINIMAGE_20200706022232_roni.jpg', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', 'Technical Operator', '2020-07-06 02:22:32', NULL);
+(2, 'aziz ', 'aziz@admin.com', 'ADMINIMAGE_20230404024548_274722802_3180048302224449_6609769685408977434_n.jpg', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', 'Root Admin', '2020-07-06 02:18:44', NULL),
+(3, 'Seif', 'seif@manager.com', 'ADMINIMAGE_20230404024655_301575756_1713981182291074_3110332702323534658_n.jpg', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', 'Content Manager', '2020-07-06 02:19:40', NULL),
+(4, 'Elyes', 'elyes@tech.com', 'ADMINIMAGE_20230404024620_331509801_1487149291811370_1610129972604295520_n.jpg', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', 'Technical Operator', '2020-07-06 02:22:32', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Structure de la table `categories`
 --
 
 CREATE TABLE `categories` (
@@ -65,7 +63,7 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `categories`
+-- Déchargement des données de la table `categories`
 --
 
 INSERT INTO `categories` (`id`, `category_name`, `category_status`, `created_at`, `updated_at`) VALUES
@@ -82,7 +80,7 @@ INSERT INTO `categories` (`id`, `category_name`, `category_status`, `created_at`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contacts`
+-- Structure de la table `contacts`
 --
 
 CREATE TABLE `contacts` (
@@ -96,16 +94,18 @@ CREATE TABLE `contacts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `contacts`
+-- Déchargement des données de la table `contacts`
 --
 
 INSERT INTO `contacts` (`id`, `contacts_name`, `contacts_email`, `contacts_phone`, `contacts_overview`, `created_at`, `updated_at`) VALUES
-(1, 'Jhon Doe', 'jhondoe@hotmail.com', '01645770422', 'Hi there,\r\nAll in all it was a really easy approach to creating your online store. I have complete control over how and what I want placed within my site, with the additional benefit of being able to change anything as and when I want.', '2020-07-06 10:20:03', NULL);
+(3, 'elyes', 'elyes11@gmail.com', '36987452', 'i want spedri nike', '2023-04-04 03:55:04', NULL),
+(7, 'seif', 'Seif11@gmail.com', '98765432', 'Iwant a pink t-Shirt', '2023-04-07 21:58:14', NULL),
+(8, 'seif', 'azizjenhani11@gmail.com', '92606158', 'Jenhani', '2023-04-17 02:08:30', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `customers`
+-- Structure de la table `customers`
 --
 
 CREATE TABLE `customers` (
@@ -121,23 +121,18 @@ CREATE TABLE `customers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `customers`
+-- Déchargement des données de la table `customers`
 --
 
 INSERT INTO `customers` (`id`, `customer_name`, `customer_email`, `customer_mobile`, `customer_address`, `customer_password`, `customer_status`, `created_at`, `updated_at`) VALUES
-(1, 'Md. Kabir Khan', 'kabirkhan@gmail.com', '01645770422', 'Rampura-1219, Dhaka, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 08:40:58', NULL),
-(2, 'Jhon Doe', 'jhondoe@gmail.com', '01645770422', 'Panthapath-1205, Dhaka, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 08:54:22', NULL),
-(3, 'Al Mamun Roni', 'almamunroni@gmail.com', '01645770422', 'Chasara-1405, Narayanganj, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 08:57:10', NULL),
-(4, 'Nirjhor Anjum', 'nirjhorsir@gmail.com', '01645770422', 'Dhaka-1206, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 09:37:53', NULL),
-(8, 'Jobayer Tuser', 'jobayertuser@gmail.com', '01645770422', 'Mohammadpur-1216, Dhaka, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 09:48:31', NULL),
-(9, 'Ahsan Habib', 'ahsanhabib@gmail.com', '01645770422', 'Dhaka, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 09:53:19', NULL),
-(13, 'Ahsan Habib', 'ahsanhabib@gmail.com', '01645770422', 'Dhaka, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 09:55:57', NULL),
-(14, 'Ahsan Habib', 'ahsanhabib@gmail.com', '01645770422', 'Dhaka, Bangladesh', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 09:56:40', NULL);
+(3, 'elyes', 'elyes@gmail.com', '01645770422', 'Chasara-1405, Djerba, Tunisia', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 08:57:10', NULL),
+(9, 'Seif Ghares', 'Seif11@gmail.com', '01645770422', 'Sayeda,Sousse, Tunisia', '6367c48dd193d56ea7b0baad25b19455e529f5ee', 'Active', '2020-07-06 09:53:19', NULL),
+(15, 'Aziz Jenhani', 'azizjenhani11@gmail.com', '92606158', 'NABEUL, kelibia', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', 'Active', '2023-04-04 02:43:07', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `deliveries`
+-- Structure de la table `deliveries`
 --
 
 CREATE TABLE `deliveries` (
@@ -151,7 +146,7 @@ CREATE TABLE `deliveries` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `discounts`
+-- Structure de la table `discounts`
 --
 
 CREATE TABLE `discounts` (
@@ -165,7 +160,7 @@ CREATE TABLE `discounts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `invoices`
+-- Structure de la table `invoices`
 --
 
 CREATE TABLE `invoices` (
@@ -180,17 +175,21 @@ CREATE TABLE `invoices` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `invoices`
+-- Déchargement des données de la table `invoices`
 --
 
 INSERT INTO `invoices` (`id`, `invoice_id`, `customer_id`, `shipping_id`, `order_id`, `transaction_amount`, `created_at`, `updated_at`) VALUES
-(1, 'COD#86237', 3, 1, 1, 9470, '2020-07-06 09:04:10', NULL),
-(2, '20070695548Tp5hxKeh1HPezyg', 9, 2, 2, 21078, '2020-07-06 10:02:09', NULL);
+(3, 'COD#45996', 15, 5, 4, 2806, '2023-04-04 02:57:59', NULL),
+(4, 'COD#12023', 15, 6, 6, 2806, '2023-04-04 03:08:01', NULL),
+(5, 'COD#81446', 15, 6, 6, 2806, '2023-04-04 03:09:54', NULL),
+(6, 'COD#90418', 15, 7, 7, 979, '2023-04-04 03:18:23', NULL),
+(7, 'COD#78985', 15, 8, 9, 2913, '2023-04-07 21:48:49', NULL),
+(8, 'COD#36630', 15, 9, 10, 7320, '2023-04-17 02:05:53', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `newsletters`
+-- Structure de la table `newsletters`
 --
 
 CREATE TABLE `newsletters` (
@@ -203,7 +202,7 @@ CREATE TABLE `newsletters` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Structure de la table `orders`
 --
 
 CREATE TABLE `orders` (
@@ -224,17 +223,25 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `orders`
+-- Déchargement des données de la table `orders`
 --
 
 INSERT INTO `orders` (`id`, `customer_id`, `order_date`, `sub_total`, `tax`, `delivery_charge`, `discount_amount`, `grand_total`, `payment_method`, `transaction_id`, `transaction_status`, `order_item_status`, `created_at`, `updated_at`) VALUES
-(1, 3, '2020-07-06 09:02:32', 8698, 652.35, 120, 0, 9470, 'Cash On Delivery', 'COD#3', 'Unpaid', 'Pending', '2020-07-06 09:02:32', NULL),
-(2, 9, '2020-07-06 10:00:01', 19496, 1462.2, 120, 0, 21078, 'SSL COMMERZ', '20070695548h40YeCxaiNzdD8D', 'Paid', 'Pending', '2020-07-06 10:00:01', NULL);
+(1, 15, '2023-02-22 09:02:32', 8698, 652.35, 120, 0, 9470, 'Cash On Delivery', 'COD#3', 'Unpaid', 'Pending', '2023-01-06 09:02:32', NULL),
+(2, 9, '2020-07-06 10:00:01', 19496, 1462.2, 120, 0, 21078, 'SSL COMMERZ', '20070695548h40YeCxaiNzdD8D', 'Paid', 'Pending', '2020-07-06 10:00:01', NULL),
+(3, 15, '2023-04-04 02:55:40', 23395, 1754.625, 120, 0, 25270, 'Cash On Delivery', '', 'Paid', 'Pending', '2023-04-04 02:55:40', NULL),
+(4, 15, '2023-04-04 02:57:20', 2499, 187.425, 120, 0, 2806, 'Cash On Delivery', 'COD#15', 'Unpaid', 'Pending', '2023-04-04 02:57:20', NULL),
+(5, 15, '2023-04-04 02:58:38', 2499, 187.425, 120, 0, 2806, 'Cash On Delivery', '', 'Paid', 'Pending', '2023-04-04 02:58:38', NULL),
+(6, 15, '2023-04-04 03:07:51', 2499, 187.425, 120, 0, 2806, 'Cash On Delivery', 'COD#15', 'Unpaid', 'Pending', '2023-04-04 03:07:51', NULL),
+(7, 15, '2023-04-04 03:18:08', 799, 59.925, 120, 0, 979, 'Cash On Delivery', 'COD#15', 'Unpaid', 'Pending', '2023-04-04 03:18:08', NULL),
+(8, 15, '2023-04-04 03:59:44', 2499, 187.425, 120, 0, 2806, 'Cash On Delivery', '', 'Paid', 'Pending', '2023-04-04 03:59:44', NULL),
+(9, 15, '2023-04-07 21:48:19', 2598, 194.85, 120, 0, 2913, 'Cash On Delivery', 'COD#15', 'Unpaid', 'Pending', '2023-04-07 21:48:19', NULL),
+(10, 15, '2023-04-17 02:05:21', 6698, 502.35, 120, 0, 7320, 'Cash On Delivery', 'COD#15', 'Unpaid', 'Pending', '2023-04-17 02:05:21', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `order_items`
+-- Structure de la table `order_items`
 --
 
 CREATE TABLE `order_items` (
@@ -249,7 +256,7 @@ CREATE TABLE `order_items` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `order_items`
+-- Déchargement des données de la table `order_items`
 --
 
 INSERT INTO `order_items` (`id`, `customer_id`, `order_id`, `product_id`, `product_price`, `prod_quantity`, `created_at`, `updated_at`) VALUES
@@ -258,12 +265,26 @@ INSERT INTO `order_items` (`id`, `customer_id`, `order_id`, `product_id`, `produ
 (3, 9, 2, 17, 4799, 1, '2020-07-06 10:00:01', NULL),
 (4, 9, 2, 39, 7499, 1, '2020-07-06 10:00:01', NULL),
 (5, 9, 2, 45, 4899, 1, '2020-07-06 10:00:01', NULL),
-(6, 9, 2, 48, 2299, 1, '2020-07-06 10:00:01', NULL);
+(6, 9, 2, 48, 2299, 1, '2020-07-06 10:00:01', NULL),
+(7, 15, 3, 46, 5799, 1, '2023-04-04 02:55:40', NULL),
+(8, 15, 3, 63, 3499, 1, '2023-04-04 02:55:40', NULL),
+(9, 15, 3, 19, 4699, 1, '2023-04-04 02:55:40', NULL),
+(10, 15, 3, 18, 4799, 1, '2023-04-04 02:55:40', NULL),
+(11, 15, 3, 12, 4599, 1, '2023-04-04 02:55:40', NULL),
+(12, 15, 4, 22, 2499, 1, '2023-04-04 02:57:20', NULL),
+(13, 15, 5, 22, 2499, 1, '2023-04-04 02:58:38', NULL),
+(14, 15, 6, 22, 2499, 1, '2023-04-04 03:07:51', NULL),
+(15, 15, 7, 24, 799, 1, '2023-04-04 03:18:08', NULL),
+(16, 15, 8, 22, 2499, 1, '2023-04-04 03:59:44', NULL),
+(17, 15, 9, 24, 799, 1, '2023-04-07 21:48:19', NULL),
+(18, 15, 9, 9, 1799, 1, '2023-04-07 21:48:19', NULL),
+(19, 15, 10, 24, 799, 1, '2023-04-17 02:05:21', NULL),
+(20, 15, 10, 38, 5899, 1, '2023-04-17 02:05:21', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pages`
+-- Structure de la table `pages`
 --
 
 CREATE TABLE `pages` (
@@ -278,7 +299,7 @@ CREATE TABLE `pages` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Structure de la table `products`
 --
 
 CREATE TABLE `products` (
@@ -305,7 +326,7 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `products`
+-- Déchargement des données de la table `products`
 --
 
 INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `product_name`, `product_summary`, `product_details`, `product_master_image`, `product_quantity`, `product_price`, `product_discount_price`, `discount_start`, `discount_ends`, `product_status`, `product_featured`, `product_tags`, `created_at`, `updated_at`, `products_image_one`, `products_image_two`, `products_image_three`) VALUES
@@ -316,12 +337,12 @@ INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `product_name`, `
 (5, 9, 9, 'MEN\'S SANDAL', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031047_shoe(2).jpg', 1, 1599, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'sandal,mens sandal', '2020-07-06 03:10:47', NULL, 'PRODUCTONE_20200706031047_shoe(2).jpg', 'PRODUCTTWO_20200706031047_shoe(2).jpg', 'PRODUCTTHREE_20200706031047_shoe(2).jpg'),
 (6, 9, 9, 'MEN\'S SANDAL', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031132_shoe(4).jpg', 1, 1299, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'sandal,mens sandal', '2020-07-06 03:11:32', NULL, 'PRODUCTONE_20200706031132_shoe(4).jpg', 'PRODUCTTWO_20200706031132_shoe(4).jpg', 'PRODUCTTHREE_20200706031132_shoe(4).jpg'),
 (7, 9, 10, 'MEN\'S SHOE', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031300_shoe(1).jpg', 1, 3699, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'shoe,mens shoe', '2020-07-06 03:13:00', NULL, 'PRODUCTONE_20200706031300_shoe(1).jpg', 'PRODUCTTWO_20200706031300_shoe(1).jpg', 'PRODUCTTHREE_20200706031300_shoe(1).jpg'),
-(8, 1, 1, 'MEN\'S PANJABI', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031559_mens_panjabi(4).jpg', 2, 1899, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'panjabi,white panjabi,mens panjabi', '2020-07-06 03:15:59', NULL, 'PRODUCTONE_20200706031559_mens_panjabi(4).jpg', 'PRODUCTTWO_20200706031559_mens_panjabi(4).jpg', 'PRODUCTTHREE_20200706031559_mens_panjabi(4).jpg'),
-(9, 1, 1, 'MEN\'S PANJABI', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.<br></li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031658_mens_panjabi(3).jpg', 1, 1799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'panjabi,mens panjabi,long panjabi', '2020-07-06 03:16:58', NULL, 'PRODUCTONE_20200706031658_mens_panjabi(3).jpg', 'PRODUCTTWO_20200706031658_mens_panjabi(3).jpg', 'PRODUCTTHREE_20200706031658_mens_panjabi(3).jpg'),
-(10, 1, 1, 'MEN\'S PANJABI', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031754_mens_panjabi(2).jpg', 2, 1899, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'YES', 'panjabi,mens panjabi,blue panjabi', '2020-07-06 03:17:54', NULL, 'PRODUCTONE_20200706031754_mens_panjabi(2).jpg', 'PRODUCTTWO_20200706031754_mens_panjabi(2).jpg', 'PRODUCTTHREE_20200706031754_mens_panjabi(2).jpg'),
-(11, 1, 1, 'MEN\'S PANJABI', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706031845_mens_panjabi(1).jpg', 1, 1499, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'panjabi,red panjabi', '2020-07-06 03:18:45', NULL, 'PRODUCTONE_20200706031845_mens_panjabi(1).jpg', 'PRODUCTTWO_20200706031845_mens_panjabi(1).jpg', 'PRODUCTTHREE_20200706031845_mens_panjabi(1).jpg'),
-(12, 1, 6, 'SUMMER SUIT 2020', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706032108_blazer(8).jpg', 2, 4599, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'pink suit,summer suit', '2020-07-06 03:21:08', NULL, 'PRODUCTONE_20200706032108_blazer(8).jpg', 'PRODUCTTWO_20200706032108_blazer(8).jpg', 'PRODUCTTHREE_20200706032108_blazer(8).jpg'),
-(13, 1, 6, 'MEN\'S SUMMER SUIT', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706032202_blazer(3).jpg', 1, 4899, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'YES', 'mens suit,summer suit', '2020-07-06 03:22:02', NULL, 'PRODUCTONE_20200706032202_blazer(3).jpg', 'PRODUCTTWO_20200706032202_blazer(3).jpg', 'PRODUCTTHREE_20200706032202_blazer(3).jpg'),
+(8, 1, 1, 'MEN\'S PANJABI', '																		<p><font face=\"Söhne, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji\"><span style=\"font-size: 16px; white-space: pre-wrap;\">Introducing our latest product: the perfect blend of style and functionality, designed to meet your every need.</span></font><br></p>																', '																		<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>																', 'PRODUCT_20200706031559_mens_panjabi(4).jpg', 2, 1899, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'panjabi,white panjabi,mens panjabi', '2020-07-06 03:15:59', NULL, 'PRODUCTONE_20200706031559_mens_panjabi(4).jpg', 'PRODUCTTWO_20200706031559_mens_panjabi(4).jpg', 'PRODUCTTHREE_20200706031559_mens_panjabi(4).jpg'),
+(9, 1, 1, 'MEN\'S PANJABI', '																		<p><span style=\"font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; white-space: pre-wrap;\">Introducing our latest product: the perfect blend of style and functionality, designed to meet your every need.</span><br></p>																', '																		<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.<br></li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>																', 'PRODUCT_20200706031658_mens_panjabi(3).jpg', 1, 1799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'panjabi,mens panjabi,long panjabi', '2020-07-06 03:16:58', NULL, 'PRODUCTONE_20200706031658_mens_panjabi(3).jpg', 'PRODUCTTWO_20200706031658_mens_panjabi(3).jpg', 'PRODUCTTHREE_20200706031658_mens_panjabi(3).jpg'),
+(10, 1, 1, 'MEN\'S PANJABI', '																		<p><span style=\"font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; white-space: pre-wrap;\">Introducing our latest product: the perfect blend of style and functionality, designed to meet your every need.</span><br></p>																', '																		<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>																', 'PRODUCT_20200706031754_mens_panjabi(2).jpg', 2, 1899, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'YES', 'panjabi,mens panjabi,blue panjabi', '2020-07-06 03:17:54', NULL, 'PRODUCTONE_20200706031754_mens_panjabi(2).jpg', 'PRODUCTTWO_20200706031754_mens_panjabi(2).jpg', 'PRODUCTTHREE_20200706031754_mens_panjabi(2).jpg'),
+(11, 1, 1, 'MEN\'S PANJABI', '																		<p><span style=\"font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; white-space: pre-wrap;\">Introducing our latest product: the perfect blend of style and functionality, designed to meet your every need.</span><br></p>																', '																		<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>																', 'PRODUCT_20200706031845_mens_panjabi(1).jpg', 1, 1499, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'panjabi,red panjabi', '2020-07-06 03:18:45', NULL, 'PRODUCTONE_20200706031845_mens_panjabi(1).jpg', 'PRODUCTTWO_20200706031845_mens_panjabi(1).jpg', 'PRODUCTTHREE_20200706031845_mens_panjabi(1).jpg'),
+(12, 1, 6, 'SUMMER SUIT 2020', '																		<p><span style=\"font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; white-space: pre-wrap;\">Introducing our latest product: the perfect blend of style and functionality, designed to meet your every need.</span><br></p>																', '																		<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>																', 'PRODUCT_20200706032108_blazer(8).jpg', 2, 4599, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'pink suit,summer suit', '2020-07-06 03:21:08', NULL, 'PRODUCTONE_20200706032108_blazer(8).jpg', 'PRODUCTTWO_20200706032108_blazer(8).jpg', 'PRODUCTTHREE_20200706032108_blazer(8).jpg'),
+(13, 1, 6, 'MEN\'S SUMMER SUIT', '																		<p><span style=\"font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; white-space: pre-wrap;\">Introducing our latest product: the perfect blend of style and functionality, designed to meet your every need.</span><br></p>																', '																		<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>																', 'PRODUCT_20200706032202_blazer(3).jpg', 1, 4899, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'YES', 'mens suit,summer suit', '2020-07-06 03:22:02', NULL, 'PRODUCTONE_20200706032202_blazer(3).jpg', 'PRODUCTTWO_20200706032202_blazer(3).jpg', 'PRODUCTTHREE_20200706032202_blazer(3).jpg'),
 (14, 1, 6, 'SUMMER SUIT 2020', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706032258_blazer(1).jpg', 1, 4799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'NO', 'suit,mens suit', '2020-07-06 03:22:58', NULL, 'PRODUCTONE_20200706032258_blazer(1).jpg', 'PRODUCTTWO_20200706032258_blazer(1).jpg', 'PRODUCTTHREE_20200706032258_blazer(1).jpg'),
 (15, 1, 6, 'EXCLUSIVE SUMMER SUIT', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706032356_blazer(5).jpg', 1, 4899, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'YES', 'suit,summer suit', '2020-07-06 03:23:56', NULL, 'PRODUCTONE_20200706032356_blazer(5).jpg', 'PRODUCTTWO_20200706032356_blazer(5).jpg', 'PRODUCTTHREE_20200706032356_blazer(5).jpg'),
 (16, 1, 2, 'EXCLUSIVE BLAZER 2020', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706032445_blazer(4).jpg', 1, 5799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'YES', 'blazer,mens blazer', '2020-07-06 03:24:45', NULL, 'PRODUCTONE_20200706032445_blazer(4).jpg', 'PRODUCTTWO_20200706032445_blazer(4).jpg', 'PRODUCTTHREE_20200706032445_blazer(4).jpg'),
@@ -329,10 +350,10 @@ INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `product_name`, `
 (18, 1, 2, 'BLAZER COLLECTION 2020', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706032628_blazer(7).jpg', 1, 4799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'blazer,mens blazer', '2020-07-06 03:26:28', NULL, 'PRODUCTONE_20200706032628_blazer(7).jpg', 'PRODUCTTWO_20200706032628_blazer(7).jpg', 'PRODUCTTHREE_20200706032628_blazer(7).jpg'),
 (19, 1, 2, 'BLUE BLAZER', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706032736_blazer(6).jpg', 1, 4699, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'blue blazer,blazer', '2020-07-06 03:27:36', NULL, 'PRODUCTONE_20200706032736_blazer(6).jpg', 'PRODUCTTWO_20200706032736_blazer(6).jpg', 'PRODUCTTHREE_20200706032736_blazer(6).jpg'),
 (20, 1, 5, 'TANJIM DENIM', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706032852_mens_denim(3).jpg', 2, 2799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'denim,tanjim denim,mens denim', '2020-07-06 03:28:52', NULL, 'PRODUCTONE_20200706032852_mens_denim(3).jpg', 'PRODUCTTWO_20200706032852_mens_denim(3).jpg', 'PRODUCTTHREE_20200706032852_mens_denim(3).jpg'),
-(21, 1, 5, 'DENIM 2020', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706032939_mens_denim(2).jpg', 1, 2699, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'YES', 'denim,jeans', '2020-07-06 03:29:39', NULL, 'PRODUCTONE_20200706032939_mens_denim(2).jpg', 'PRODUCTTWO_20200706032939_mens_denim(2).jpg', 'PRODUCTTHREE_20200706032939_mens_denim(2).jpg'),
-(22, 1, 5, 'NON STITCH JEANS', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706033044_mens_denim(4).jpg', 1, 2499, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'denim,jeans,non stitch pant', '2020-07-06 03:30:44', NULL, 'PRODUCTONE_20200706033044_mens_denim(4).jpg', 'PRODUCTTWO_20200706033044_mens_denim(4).jpg', 'PRODUCTTHREE_20200706033044_mens_denim(4).jpg'),
+(21, 1, 5, 'DENIM 2020', '																		<p><span style=\"font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; white-space: pre-wrap;\">Introducing our latest product: the perfect blend of style and functionality, designed to meet your every need.</span><br></p>																', '																		<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>																', 'PRODUCT_20200706032939_mens_denim(2).jpg', 1, 2699, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'YES', 'denim,jeans', '2020-07-06 03:29:39', NULL, 'PRODUCTONE_20200706032939_mens_denim(2).jpg', 'PRODUCTTWO_20200706032939_mens_denim(2).jpg', 'PRODUCTTHREE_20200706032939_mens_denim(2).jpg'),
+(22, 1, 5, 'NON STITCH JEANS', '																		<p><span style=\"font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; white-space: pre-wrap;\">Introducing our latest product: the perfect blend of style and functionality, designed to meet your every need.</span><br></p>																', '																		<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>																', 'PRODUCT_20200706033044_mens_denim(4).jpg', 1, 2499, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'denim,jeans,non stitch pant', '2020-07-06 03:30:44', NULL, 'PRODUCTONE_20200706033044_mens_denim(4).jpg', 'PRODUCTTWO_20200706033044_mens_denim(4).jpg', 'PRODUCTTHREE_20200706033044_mens_denim(4).jpg'),
 (23, 1, 5, 'EXCLUSIVE DENIM', '									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>								', '									<div>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</div><div><br></div><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706033134_mens_denim(1).jpg', 1, 2699, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'denim,jeans pant', '2020-07-06 03:31:34', NULL, 'PRODUCTONE_20200706033134_mens_denim(1).jpg', 'PRODUCTTWO_20200706033134_mens_denim(1).jpg', 'PRODUCTTHREE_20200706033134_mens_denim(1).jpg'),
-(24, 1, 4, 'SOLID T-SHIRT', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706041154_mens_tshirt(2).jpg', 1, 799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'NO', 'tshirt,solid t-shirt', '2020-07-06 04:11:54', NULL, 'PRODUCTONE_20200706041154_mens_tshirt(2).jpg', 'PRODUCTTWO_20200706041154_mens_tshirt(2).jpg', 'PRODUCTTHREE_20200706041154_mens_tshirt(2).jpg'),
+(24, 1, 4, 'SOLID T-SHIRT', '									<p><span style=\"font-family: Söhne, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;, sans-serif, &quot;Helvetica Neue&quot;, Arial, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; white-space: pre-wrap;\">Introducing our latest product: the perfect blend of style and functionality, designed to meet your every need.</span><br></p>								', '									<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>								', 'PRODUCT_20200706041154_mens_tshirt(2).jpg', 1, 799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'NO', 'tshirt,solid t-shirt', '2020-07-06 04:11:54', NULL, 'PRODUCTONE_20200706041154_mens_tshirt(2).jpg', 'PRODUCTTWO_20200706041154_mens_tshirt(2).jpg', 'PRODUCTTHREE_20200706041154_mens_tshirt(2).jpg'),
 (25, 1, 4, 'PRINTED T-SHIRT', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706041301_mens_tshirt(3).jpg', 1, 799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'tshirt,khakhi', '2020-07-06 04:13:01', NULL, 'PRODUCTONE_20200706041301_mens_tshirt(3).jpg', 'PRODUCTTWO_20200706041301_mens_tshirt(3).jpg', 'PRODUCTTHREE_20200706041301_mens_tshirt(3).jpg'),
 (26, 1, 4, 'EXCLUSIVE T-SHIRT 2020', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706041433_mens_tshirt(4).jpg', 2, 799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'tshirt,mens t-shirt', '2020-07-06 04:14:33', NULL, 'PRODUCTONE_20200706041433_mens_tshirt(4).jpg', 'PRODUCTTWO_20200706041433_mens_tshirt(4).jpg', 'PRODUCTTHREE_20200706041433_mens_tshirt(4).jpg'),
 (27, 1, 4, 'PRINTED T-SHIRT', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706041527_mens_tshirt(1).jpg', 1, 799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'tshirt,white tshirt,printed', '2020-07-06 04:15:27', NULL, 'PRODUCTONE_20200706041527_mens_tshirt(1).jpg', 'PRODUCTTWO_20200706041527_mens_tshirt(1).jpg', 'PRODUCTTHREE_20200706041527_mens_tshirt(1).jpg'),
@@ -345,11 +366,11 @@ INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `product_name`, `
 (34, 8, 7, 'G-SHOCK', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706042324_mens_watch(3).jpg', 1, 5899, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'NO', 'gshock,g-shock,watch,mens watch', '2020-07-06 04:23:24', NULL, 'PRODUCTONE_20200706042324_mens_watch(3).jpg', 'PRODUCTTWO_20200706042324_mens_watch(3).jpg', 'PRODUCTTHREE_20200706042324_mens_watch(3).jpg'),
 (35, 8, 7, 'FESTINA', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706042505_mens_watch(4).jpg', 1, 5899, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'NO', 'festina,watch,mens watch', '2020-07-06 04:25:05', NULL, 'PRODUCTONE_20200706042505_mens_watch(4).jpg', 'PRODUCTTWO_20200706042505_mens_watch(4).jpg', 'PRODUCTTHREE_20200706042505_mens_watch(4).jpg'),
 (36, 8, 7, 'TIMEX', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706042549_mens_watch(5).jpg', 2, 7499, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'NO', 'timex,watch', '2020-07-06 04:25:49', NULL, 'PRODUCTONE_20200706042549_mens_watch(5).jpg', 'PRODUCTTWO_20200706042549_mens_watch(5).jpg', 'PRODUCTTHREE_20200706042549_mens_watch(5).jpg'),
-(37, 8, 7, 'TIMEX', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706042657_mens_watch(6).jpg', 1, 6799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'NO', 'timex,watch', '2020-07-06 04:26:57', NULL, 'PRODUCTONE_20200706042657_mens_watch(6).jpg', 'PRODUCTTWO_20200706042657_mens_watch(6).jpg', 'PRODUCTTHREE_20200706042657_mens_watch(6).jpg'),
+(37, 8, 7, 'TIMEX', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706042657_mens_watch(6).jpg', 1, 6799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'NO', 'timex,watch', '2020-07-06 04:26:57', NULL, 'PRODUCTONE_20200706042657_mens_watch(6).jpg', 'PRODUCTTWO_20200706042657_mens_watch(6).jpg', 'PRODUCTTHREE_20200706042657_mens_watch(6).jpg');
+INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `product_name`, `product_summary`, `product_details`, `product_master_image`, `product_quantity`, `product_price`, `product_discount_price`, `discount_start`, `discount_ends`, `product_status`, `product_featured`, `product_tags`, `created_at`, `updated_at`, `products_image_one`, `products_image_two`, `products_image_three`) VALUES
 (38, 8, 7, 'HUGO BOSS', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706042743_mens_watch(7).jpg', 1, 5899, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'NO', 'hugo,watch,hugo boss', '2020-07-06 04:27:43', NULL, 'PRODUCTONE_20200706042743_mens_watch(7).jpg', 'PRODUCTTWO_20200706042743_mens_watch(7).jpg', 'PRODUCTTHREE_20200706042743_mens_watch(7).jpg'),
 (39, 8, 7, 'CASIO EDIFICE', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706042835_mens_watch(8).jpg', 1, 7499, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'NO', 'casio,edifice,watch', '2020-07-06 04:28:35', NULL, 'PRODUCTONE_20200706042835_mens_watch(8).jpg', 'PRODUCTTWO_20200706042835_mens_watch(8).jpg', 'PRODUCTTHREE_20200706042835_mens_watch(8).jpg'),
-(40, 8, 8, 'FOSSIL', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706043303_womens_watch(1).jpg', 1, 4799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'fossil,womens watch,watch', '2020-07-06 04:33:03', NULL, 'PRODUCTONE_20200706043303_womens_watch(1).jpg', 'PRODUCTTWO_20200706043303_womens_watch(1).jpg', 'PRODUCTTHREE_20200706043303_womens_watch(1).jpg');
-INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `product_name`, `product_summary`, `product_details`, `product_master_image`, `product_quantity`, `product_price`, `product_discount_price`, `discount_start`, `discount_ends`, `product_status`, `product_featured`, `product_tags`, `created_at`, `updated_at`, `products_image_one`, `products_image_two`, `products_image_three`) VALUES
+(40, 8, 8, 'FOSSIL', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706043303_womens_watch(1).jpg', 1, 4799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'fossil,womens watch,watch', '2020-07-06 04:33:03', NULL, 'PRODUCTONE_20200706043303_womens_watch(1).jpg', 'PRODUCTTWO_20200706043303_womens_watch(1).jpg', 'PRODUCTTHREE_20200706043303_womens_watch(1).jpg'),
 (41, 8, 8, 'GUCCI', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706043352_womens_watch(2).jpg', 1, 7999, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'gucci,womes watch', '2020-07-06 04:33:52', NULL, 'PRODUCTONE_20200706043352_womens_watch(2).jpg', 'PRODUCTTWO_20200706043352_womens_watch(2).jpg', 'PRODUCTTHREE_20200706043352_womens_watch(2).jpg'),
 (42, 8, 8, 'GUESS', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br></p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706043540_womens_watch(3).jpg', 1, 8999, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'In Stock', 'YES', 'guess,womens watch', '2020-07-06 04:35:40', NULL, 'PRODUCTONE_20200706043540_womens_watch(3).jpg', 'PRODUCTTWO_20200706043540_womens_watch(3).jpg', 'PRODUCTTHREE_20200706043540_womens_watch(3).jpg'),
 (43, 8, 8, 'GUESS', '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>', '<p>Tortor at risus viverra adipiscing at in tellus integer feugiat. Ultrices in iaculis nunc sed augue lacus viverra vitae. A diam sollicitudin tempor id eu nisl nunc. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Quis auctor elit sed vulputate mi sit amet mauris commodo. Risus nullam eget felis eget nunc.</p><p><br></p><ul><li>Ultrices in iaculis nunc sed. Imperdiet massa tincidunt nunc pulvinar sapien et.</li><li>Euismod nisi porta lorem mollis aliquam ut porttitor.</li><li>Integer feugiat scelerisque varius morbi enim nunc faucibus a.</li><li>Ac felis donec et odio. Duis convallis convallis tellus id interdum velit.</li><li>Placerat orci nulla pellentesque dignissim enim sit amet venenatis.</li></ul>', 'PRODUCT_20200706043618_womens_watch(4).jpg', 1, 4799, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'Out of Stock', 'NO', 'guess,watch', '2020-07-06 04:36:18', NULL, 'PRODUCTONE_20200706043618_womens_watch(4).jpg', 'PRODUCTTWO_20200706043618_womens_watch(4).jpg', 'PRODUCTTHREE_20200706043618_womens_watch(4).jpg'),
@@ -383,7 +404,7 @@ INSERT INTO `products` (`id`, `category_id`, `subcategory_id`, `product_name`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `shippings`
+-- Structure de la table `shippings`
 --
 
 CREATE TABLE `shippings` (
@@ -402,17 +423,24 @@ CREATE TABLE `shippings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `shippings`
+-- Déchargement des données de la table `shippings`
 --
 
 INSERT INTO `shippings` (`id`, `customer_id`, `order_id`, `shipcstmr_name`, `shipcstmr_mobile`, `shipcstmr_profession`, `shipcstmr_streetadd`, `shipcstmr_city`, `shipcstmr_zip`, `shipcstmr_country`, `created_at`, `updated_at`) VALUES
-(1, 3, 1, 'Firoz Ahmed', '01645770422', 'Graphics Designer', 'Police Line, Panchabati', 'Fatullah', '1405', 'Bangladesh', '2020-07-06 09:03:55', NULL),
-(2, 9, 2, 'Shahnaz Khanam', '01645770422', 'Housewife', 'Main Road # 2/B', 'Baridhara', '1406', 'Bangladesh', '2020-07-06 10:02:01', NULL);
+(1, 3, 1, 'Elyes', '32654789', 'Graphics Designer', 'Police Line, Panchabati', 'Kelibia', '1405', 'Nabeul', '2023-02-06 09:03:55', NULL),
+(2, 9, 2, 'Seif', '01645770422', 'computer Science', 'Main Road # 2/B', 'Sayeda', '1406', 'Sousse', '2023-03-01 10:02:01', NULL),
+(3, 15, 3, 'Aziz Jenhani', '92606158', '', 'NABEUL, kelibia', 'NABEUL', '8025', 'Tunisie', '2023-04-04 02:56:13', NULL),
+(4, 15, 3, 'Aziz Jenhani', '92606158', '', 'NABEUL, kelibia', 'NABEUL', '8025', 'Tunisie', '2023-04-04 02:56:56', NULL),
+(5, 15, 4, 'Aziz Jenhani', '92606158', '', 'NABEUL, kelibia', 'NABEUL', '8025', 'Tunisie', '2023-04-04 02:57:31', NULL),
+(6, 15, 6, 'Aziz Jenhani', '92606158', '', 'NABEUL, kelibia', 'NABEUL', '8025', 'Tunisie', '2023-04-04 03:07:55', NULL),
+(7, 15, 7, 'Aziz Jenhani', '92606158', '', 'NABEUL, kelibia', 'NABEUL', '8025', 'Tunisie', '2023-04-04 03:18:12', NULL),
+(8, 15, 9, 'Aziz Jenhani', '92606158', '', 'NABEUL, kelibia', 'NABEUL', '8025', 'Tunisie', '2023-04-07 21:48:36', NULL),
+(9, 15, 10, 'Aziz Jenhani', '92606158', '', 'NABEUL, kelibia', 'NABEUL', '8025', 'Tunisie', '2023-04-17 02:05:26', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `shopcarts`
+-- Structure de la table `shopcarts`
 --
 
 CREATE TABLE `shopcarts` (
@@ -424,10 +452,18 @@ CREATE TABLE `shopcarts` (
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Déchargement des données de la table `shopcarts`
+--
+
+INSERT INTO `shopcarts` (`id`, `customer_id`, `product_id`, `quantity`, `created_at`, `updated_at`) VALUES
+(22, 3, 24, 1, '2023-04-07 22:03:58', NULL),
+(24, 15, 24, 1, '2023-04-17 02:09:31', NULL);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slides`
+-- Structure de la table `slides`
 --
 
 CREATE TABLE `slides` (
@@ -441,21 +477,21 @@ CREATE TABLE `slides` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `slides`
+-- Déchargement des données de la table `slides`
 --
 
 INSERT INTO `slides` (`id`, `slider_title`, `slider_file`, `slider_status`, `slider_sequence`, `created_at`, `updated_at`) VALUES
-(1, 'EID FESTIVAL COLLECTION 2020', 'SLIDER_20200706022816_slide852r.jpg', 'Active', 1, NULL, NULL),
 (2, 'HOME DECOR', 'SLIDER_20200706022832_slider.jpg', 'Active', 2, NULL, NULL),
-(3, 'PAHELA BAISHAK COLLECTION 2020', 'SLIDER_20200706022906_slid63er.jpg', 'Active', 3, NULL, NULL),
-(4, 'EID COLLECTION 2020', 'SLIDER_20200706022921_slid3er.jpg', 'Active', 4, NULL, NULL),
-(5, 'KIDS COLLECTION 2020', 'SLIDER_20200706022936_slide1r.jpg', 'Active', 5, NULL, NULL),
-(6, 'SUMMER COLLECTION 2020', 'SLIDER_20200706023006_sli74der.jpg', 'Active', 6, NULL, NULL);
+(7, 'PAHELA BAISHAK COLLECTION 2022', 'SLIDER_20230404024916_slider-3.jpg', 'Active', 2, NULL, NULL),
+(8, 'EID COLLECTION 2023', 'SLIDER_20230404040414_slider-2.jpg', 'Active', 3, NULL, NULL),
+(9, ' BAISHAK COLLECTION 2023', 'SLIDER_20230404040601_plaza.jpg', 'Active', 1, NULL, NULL),
+(10, ' BAISHAK COLLECTION 2023', 'SLIDER_20230404040617_slider1.jpg', 'Active', 6, NULL, NULL),
+(11, ' BAISHAK COLLECTION 2023', 'SLIDER_20230404040636_091216-casualfalloutifts-slider-2png.png', 'Active', 7, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `subcategories`
+-- Structure de la table `subcategories`
 --
 
 CREATE TABLE `subcategories` (
@@ -469,7 +505,7 @@ CREATE TABLE `subcategories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `subcategories`
+-- Déchargement des données de la table `subcategories`
 --
 
 INSERT INTO `subcategories` (`id`, `category_id`, `subcategory_name`, `subcategory_status`, `subcategory_banner`, `created_at`, `updated_at`) VALUES
@@ -499,48 +535,48 @@ INSERT INTO `subcategories` (`id`, `category_id`, `subcategory_name`, `subcatego
 (24, 7, 'GADGETS', 'Active', 'SUBCATBANNER_20200706035003_banner(2).jpg', '2020-07-06 03:50:03', NULL);
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `admins`
+-- Index pour la table `admins`
 --
 ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `categories`
+-- Index pour la table `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `contacts`
+-- Index pour la table `contacts`
 --
 ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `customers`
+-- Index pour la table `customers`
 --
 ALTER TABLE `customers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `deliveries`
+-- Index pour la table `deliveries`
 --
 ALTER TABLE `deliveries`
   ADD PRIMARY KEY (`id`),
   ADD KEY `customer_id` (`customer_id`);
 
 --
--- Indexes for table `discounts`
+-- Index pour la table `discounts`
 --
 ALTER TABLE `discounts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `invoices`
+-- Index pour la table `invoices`
 --
 ALTER TABLE `invoices`
   ADD PRIMARY KEY (`id`),
@@ -549,20 +585,20 @@ ALTER TABLE `invoices`
   ADD KEY `order_id` (`order_id`);
 
 --
--- Indexes for table `newsletters`
+-- Index pour la table `newsletters`
 --
 ALTER TABLE `newsletters`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `orders`
+-- Index pour la table `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
   ADD KEY `customer_id` (`customer_id`);
 
 --
--- Indexes for table `order_items`
+-- Index pour la table `order_items`
 --
 ALTER TABLE `order_items`
   ADD PRIMARY KEY (`id`),
@@ -571,13 +607,13 @@ ALTER TABLE `order_items`
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `pages`
+-- Index pour la table `pages`
 --
 ALTER TABLE `pages`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `products`
+-- Index pour la table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
@@ -585,7 +621,7 @@ ALTER TABLE `products`
   ADD KEY `subcategory_id` (`subcategory_id`);
 
 --
--- Indexes for table `shippings`
+-- Index pour la table `shippings`
 --
 ALTER TABLE `shippings`
   ADD PRIMARY KEY (`id`),
@@ -593,7 +629,7 @@ ALTER TABLE `shippings`
   ADD KEY `order_id` (`order_id`);
 
 --
--- Indexes for table `shopcarts`
+-- Index pour la table `shopcarts`
 --
 ALTER TABLE `shopcarts`
   ADD PRIMARY KEY (`id`),
@@ -601,131 +637,131 @@ ALTER TABLE `shopcarts`
   ADD KEY `product_id` (`product_id`);
 
 --
--- Indexes for table `slides`
+-- Index pour la table `slides`
 --
 ALTER TABLE `slides`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `subcategories`
+-- Index pour la table `subcategories`
 --
 ALTER TABLE `subcategories`
   ADD PRIMARY KEY (`id`),
   ADD KEY `category_id` (`category_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `admins`
+-- AUTO_INCREMENT pour la table `admins`
 --
 ALTER TABLE `admins`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ADMINS ID', AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `categories`
+-- AUTO_INCREMENT pour la table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'CATEGORIES ID', AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `contacts`
+-- AUTO_INCREMENT pour la table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'CONTACTS ID', AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'CONTACTS ID', AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `customers`
+-- AUTO_INCREMENT pour la table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'CUSTOMERS ID', AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'CUSTOMERS ID', AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `deliveries`
+-- AUTO_INCREMENT pour la table `deliveries`
 --
 ALTER TABLE `deliveries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'DELIVERIES ID', AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'DELIVERIES ID', AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `discounts`
+-- AUTO_INCREMENT pour la table `discounts`
 --
 ALTER TABLE `discounts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'DISCOUNT ID';
 
 --
--- AUTO_INCREMENT for table `invoices`
+-- AUTO_INCREMENT pour la table `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'INVOICE ID', AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'INVOICE ID', AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `newsletters`
+-- AUTO_INCREMENT pour la table `newsletters`
 --
 ALTER TABLE `newsletters`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'NEWSLETTER ID';
 
 --
--- AUTO_INCREMENT for table `orders`
+-- AUTO_INCREMENT pour la table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDERS ID', AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDERS ID', AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `order_items`
+-- AUTO_INCREMENT pour la table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDER ITEMS ID', AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ORDER ITEMS ID', AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `pages`
+-- AUTO_INCREMENT pour la table `pages`
 --
 ALTER TABLE `pages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'PAGES ID';
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT pour la table `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'PRODUCTS ID', AUTO_INCREMENT=70;
 
 --
--- AUTO_INCREMENT for table `shippings`
+-- AUTO_INCREMENT pour la table `shippings`
 --
 ALTER TABLE `shippings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SHIPPING ID', AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SHIPPING ID', AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `shopcarts`
+-- AUTO_INCREMENT pour la table `shopcarts`
 --
 ALTER TABLE `shopcarts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SHOPCARTS ID', AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SHOPCARTS ID', AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT for table `slides`
+-- AUTO_INCREMENT pour la table `slides`
 --
 ALTER TABLE `slides`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SLIDER ID', AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SLIDER ID', AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `subcategories`
+-- AUTO_INCREMENT pour la table `subcategories`
 --
 ALTER TABLE `subcategories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'SUBCATEGORIES ID', AUTO_INCREMENT=25;
 
 --
--- Constraints for dumped tables
+-- Contraintes pour les tables déchargées
 --
 
 --
--- Constraints for table `deliveries`
+-- Contraintes pour la table `deliveries`
 --
 ALTER TABLE `deliveries`
   ADD CONSTRAINT `deliveries_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `deliveries_ibfk_2` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `invoices`
+-- Contraintes pour la table `invoices`
 --
 ALTER TABLE `invoices`
   ADD CONSTRAINT `invoices_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON UPDATE CASCADE,
@@ -733,13 +769,13 @@ ALTER TABLE `invoices`
   ADD CONSTRAINT `invoices_ibfk_3` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `orders`
+-- Contraintes pour la table `orders`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `order_items`
+-- Contraintes pour la table `order_items`
 --
 ALTER TABLE `order_items`
   ADD CONSTRAINT `order_items_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON UPDATE CASCADE,
@@ -747,28 +783,28 @@ ALTER TABLE `order_items`
   ADD CONSTRAINT `order_items_ibfk_3` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `products`
+-- Contraintes pour la table `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`subcategory_id`) REFERENCES `subcategories` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `shippings`
+-- Contraintes pour la table `shippings`
 --
 ALTER TABLE `shippings`
   ADD CONSTRAINT `shippings_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `shippings_ibfk_2` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `shopcarts`
+-- Contraintes pour la table `shopcarts`
 --
 ALTER TABLE `shopcarts`
   ADD CONSTRAINT `shopcarts_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `shopcarts_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `subcategories`
+-- Contraintes pour la table `subcategories`
 --
 ALTER TABLE `subcategories`
   ADD CONSTRAINT `subcategories_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON UPDATE CASCADE;
